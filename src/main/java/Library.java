@@ -14,7 +14,17 @@ public class Library {
         return this.bookCollection.size();
     }
 
+    public boolean hasSpace(){
+       if(this.capacity > bookCount()){
+           return true;
+       } else {
+           return false;
+       }
+    }
+
     public void addBook(Book bookToAdd){
-        this.bookCollection.add(bookToAdd);
+        if(hasSpace()) {
+            this.bookCollection.add(bookToAdd);
+        }
     }
 }

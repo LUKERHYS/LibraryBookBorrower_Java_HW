@@ -25,4 +25,12 @@ public class LibraryTest {
         assertEquals(1, library.bookCount());
     }
 
+    @Test
+    public void cannotAddBookLimitReached(){
+        Library libraryFull = new Library(1);
+        libraryFull.addBook(book);
+        libraryFull.addBook(book);
+        assertEquals(1, libraryFull.bookCount());
+    }
+
 }
