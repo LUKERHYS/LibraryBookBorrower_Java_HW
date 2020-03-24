@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class LibraryTest {
 
     private Library library;
@@ -13,6 +15,8 @@ public class LibraryTest {
     }
 
     @Test
-    public void
+    public void libraryStartsEmpty(){
+        assertEquals(0, library.bookCount());
+    }
 
 }
