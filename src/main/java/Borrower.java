@@ -10,5 +10,13 @@ public class Borrower {
         this.name = name;
     }
 
+    public int bookCount(){
+        return this.booksOnLoan.size();
+    }
+
+    public void borrowBook(Library library){
+        Book book = library.removeBook();
+        this.booksOnLoan.add(book);
+    }
 
 }

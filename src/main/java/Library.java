@@ -27,4 +27,8 @@ public class Library {
             this.bookCollection.add(bookToAdd);
         }
     }
+
+    public Book removeBook() {
+        return this.bookCollection.remove(0);
+    }
 }
